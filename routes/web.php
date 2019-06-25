@@ -12,7 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('index');
 
 Auth::routes();
+
+Route::get('/student/{slug}', 'StudentController@show');
+Route::post('/student/{slug}', 'StudentController@storeDetention');
+
+Route::get('/students', 'StudentController@index');

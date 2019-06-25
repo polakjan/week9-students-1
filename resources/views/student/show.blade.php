@@ -28,6 +28,7 @@
         <h2>Give detention</h2>
 
         <form action="" method="post">
+            @csrf
 
             <input type="text" name="subject" placeholder="Reason for detention">
 
